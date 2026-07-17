@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cofetăria Poveste</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Free HTML Templates" name="keywords">
+    <meta content="Free HTML Templates" name="description">
+
+    <!-- Favicon -->
+   <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="img/site.webmanifest">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<meta name="theme-color" content="#d134c9">
+<meta property="og:type" content="website">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+ <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Topbar Start -->
+    <div class="container-fluid bg-primary py-3 d-none d-md-block">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 text-center text-lg-left mb-2 mb-lg-0">
+                    <div class="d-inline-flex align-items-center">
+                    </div>
+                </div>
+                <div class="col-md-6 text-center text-lg-right">
+                    <div class="d-inline-flex align-items-center">
+                            <a class="text-white px-3" href="https://www.facebook.com/IDinaArsene/">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                      
+                       
+                        <a class="text-white px-3" href="https://www.instagram.com/cofetaria_poveste/">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a class="text-white px-3" href="https://www.tiktok.com/@cofetariapoveste">
+                            <i class="fab fa-tiktok"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Topbar End -->
+
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Poveste</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Acasa</a>
+                        <a href="product.html" class="nav-item nav-link">Produse</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Cofetăria Poveste</span></h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="gallery.html" class="nav-item nav-link">Candy Bar</a>
+                        <a href="contact.html" class="nav-item nav-link active">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header" style="margin-bottom: 90px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5" style="@media (max-width: 768) {
+              margin-top: 20px;
+            }">Contact</h1>
+            <div class="d-inline-flex align-items-center text-white">
+
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+<!-- Contact Start -->
+<section id="contact" class="py-5">
+  <div class="container">
+    <div class="row g-4 align-items-stretch">
+
+      <!-- Formular -->
+      <div class="col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4 h-100 p-4">
+          <h3 class="text-center mb-4" style="color:#d134c9;">Contactează-ne</h3>
+          <form id="contactForm">
+            <div class="mb-3">
+              <label for="name" class="form-label">Nume complet</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="phone" class="form-label">Telefon</label>
+              <input type="text" class="form-control" id="phone" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Mesaj</label>
+              <textarea id="message" class="form-control" rows="4" required></textarea>
+            </div>
+            <button type="submit" class="btn w-100 text-white fw-bold"
+              style="background: linear-gradient(135deg, #d134c9, #f065e7);">
+              Trimite mesajul
+            </button>
+          </form>
+        </div>
+      </div>
+      <div id="formStatus" class="alert mt-3 d-none" role="alert"></div>
+
+
+      <!-- Harta -->
+      <div class="col-lg-6">
+        <div class="card shadow-lg border-0 rounded-4 h-100 overflow-hidden">
+          <div class="ratio ratio-16x9">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2712.6905761342696!2d27.561144312079954!3d47.16391427103234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafb006e813aad%3A0x96761ef2d10da9a1!2sCofet%C4%83ria%20Poveste!5e0!3m2!1sro!2sro!4v1761138714714!5m2!1sro!2sro" 
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                <div class="text-center py-3" style="background:#fff;">
+                    <h5 class="mb-1" style="color:#d134c9;">Adresa</h5>
+                    <p class="mb-0 text-muted">Bulevardul Alexandru cel Bun nr.52, Iași 707305</p>
+                </div>
+
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- Contact End -->
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("contactForm");
+  const toast = document.getElementById("toast");
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+
+    toast.textContent = "Se trimite mesajul...";
+    toast.className = "toast-message show loading";
+
+    const payload = {
+      contact: true,
+      name: form.querySelector("#name").value,
+      email: form.querySelector("#email").value,
+      phone: form.querySelector("#phone").value,
+      message: form.querySelector("#message").value
+    };
+
+    try {
+      await fetch("https://script.google.com/macros/s/AKfycbysBrIRsnjh-7-6PZAUqEnTAOJWZ_2n68b5g8Y5zVaVD5yQC5j75CjAPvJNvJ9m_o4ELA/exec", {
+        method: "POST",
+        mode: "no-cors",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload)
+      });
+
+      toast.textContent = "Mesajul tău a fost trimis cu succes!";
+      toast.className = "toast-message show";
+      form.reset();
+
+      setTimeout(() => toast.className = "toast-message", 3000);
+    } catch {
+      toast.textContent = "Eroare la trimiterea mesajului.";
+      toast.className = "toast-message show error";
+      setTimeout(() => toast.className = "toast-message", 3000);
+    }
+  });
+});
+</script>
+
+
+
+
+
+
+<!-- Footer Start -->
+    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary"></span>Cofetăria Poveste</h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/IDinaArsene/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.instagram.com/cofetaria_poveste/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Detalii de contact</h5>
+                            <p class="mb-2">Bulevardul Alexandru cel Bun nr.52,<br> Iași 707305</p>
+                            <p class="mb-0">+40 746 347 896</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Program de lucru</h5>
+                            <p class="mb-2">Luni – Duminică <br> 9:00 – 20:00</p>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p > Cofetăria Poveste © 2026 - Toate drepturile sunt rezervate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    <!-- Toast notification -->
+<div id="toast" class="toast-message"></div>
+<a href="https://wa.me/40774950664" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+
+</html>

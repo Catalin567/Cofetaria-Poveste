@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Cofetăria Poveste: Comandă acum cele mai delicioase prăjituri din Iași</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="Cofetăria Poveste oferă prăjituri naturale, torturi artizanale și candy baruri pentru evenimente. Comandă online sau vizitează-ne în Iași." name="keywords">
+    <meta content="La Cofetăria Poveste găsești prăjituri naturale, torturi artizanale și candy baruri pentru evenimente. Comandă online sau vizitează-ne în Iași." name="description">
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="img/favicon-16x16.png">
+<link rel="manifest" href="img/site.webmanifest">
+<link rel="icon" type="image/x-icon" href="img/favicon.ico">
+<meta name="theme-color" content="#d134c9">
+<meta property="og:type" content="website">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+<!-- ======= TOPBAR ======= -->
+<div class="topbar">
+  <div class="container px-3">
+    <div class="d-flex flex-wrap justify-content-between align-items-center">
+      <!-- Stânga -->
+      <div class="d-flex flex-wrap align-items-center small mb-2 mb-sm-0">
+
+      </div>
+
+      <!-- Dreapta: Coș -->
+      <div class="d-flex align-items-center mt-1 mt-sm-0">
+        <a href="#" id="cart-btn" class="font-weight-bold">
+          <i class="fa fa-shopping-cart mr-1"></i>
+          <span class="d-none d-sm-inline">Coș</span>
+          <span id="cart-count" class="cart-badge-top">0</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- ======= END TOPBAR ======= -->
+
+    <!-- Navbar Start -->
+    <div class="container-fluid position-relative nav-bar p-0">
+        <div class="container-lg position-relative p-0 px-lg-3" style="z-index: 9;">
+            <nav class="navbar navbar-expand-lg bg-white navbar-light shadow p-lg-0">
+                <a href="index.html" class="navbar-brand d-block d-lg-none">
+                    <h1 class="m-0 display-4 text-primary"><span class="text-secondary"></span>Poveste</h1>
+                </a>
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                    <div class="navbar-nav ml-auto py-0">
+                        <a href="index.html" class="nav-item nav-link">Acasa</a>
+                        <a href="product.html" class="nav-item nav-link active">Produse</a>
+                    </div>
+                    <a href="index.html" class="navbar-brand mx-5 d-none d-lg-block">
+                        <h1 class="m-0 display-4 text-primary"><span class="text-secondary">Cofetăria Poveste</span> </h1>
+                    </a>
+                    <div class="navbar-nav mr-auto py-0">
+                        <a href="gallery.html" class="nav-item nav-link">Candy bar</a>
+                        <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="jumbotron jumbotron-fluid page-header" id="candy-bar-img" style="margin-bottom: 0px;">
+        <div class="container text-center py-5">
+            <h1 class="text-white display-3 mt-lg-5"></h1>
+            <div class="d-inline-flex align-items-center text-white">
+          <h1 class="section-title-products position-relative text-center mb-5">
+                    Descoperă gama noastră variată <br> de produse</h1>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+
+    <!-- Products Start -->
+    <div class="container-fluid py-5">
+        <div class="container py-5">
+            <div class="row justify-content-center">
+                <div class="col-lg-6">
+                    <!-- === FILTRARE & SORTARE === -->
+<div class="filters-container text-center mb-4">
+  <div class="filters-row">
+    <div class="filters-left">
+      <button class="filter-btn active" data-filter="all">Toate</button>
+      <button class="filter-btn" data-filter="torturi">Torturi</button>
+      <button class="filter-btn" data-filter="prajituri">Prajituri</button>
+      <button class="filter-btn" data-filter="de-sezon">De sezon</button>
+      <button class="filter-btn" data-filter="patiserie">Patiserie</button>
+    </div>
+    <div class="filters-right">
+      <select id="sort-select">
+        <option value="default">Sortează</option>
+        <option value="asc">Preț crescător</option>
+        <option value="desc">Preț descrescător</option>
+      </select>
+    </div>
+  </div>
+</div>
+
+                </div>
+            </div>
+
+           <div class="row" id="product-list">
+  <!-- Produsele sunt generate automat din main.js -->
+</div>
+
+<div class="col-12 text-center mt-4">
+  <button id="load-more" class="btn btn-outline-primary px-4 py-2">
+    Mai multe produse
+  </button>
+</div>
+
+        </div>
+    </div>
+    <!-- Products End -->
+
+
+    <!-- Footer Start -->
+    <div class="container-fluid footer bg-light py-5" style="margin-top: 90px;">
+        <div class="container text-center py-5">
+            <div class="row">
+                <div class="col-12 mb-4">
+                    <a href="index.html" class="navbar-brand m-0">
+                        <h1 class="m-0 mt-n2 display-4 text-primary"><span class="text-secondary"></span>Cofetăria Poveste</h1>
+                    </a>
+                </div>
+                <div class="col-12 mb-4">
+                    <a class="btn btn-outline-secondary btn-social mr-2" href="https://www.facebook.com/IDinaArsene/"><i class="fab fa-facebook-f"></i></a>
+                    <a class="btn btn-outline-secondary btn-social" href="https://www.instagram.com/cofetaria_poveste/"><i class="fab fa-instagram"></i></a>
+                </div>
+                <div class="col-12 mt-2 mb-4">
+                    <div class="row">
+                        <div class="col-sm-6 text-center text-sm-right border-right mb-3 mb-sm-0">
+                            <h5 class="font-weight-bold mb-2">Detalii de contact</h5>
+                            <p class="mb-2">Bulevardul Alexandru cel Bun nr.52,<br> Iași 707305</p>
+                            <p class="mb-0">+40 746 347 896</p>
+                        </div>
+                        <div class="col-sm-6 text-center text-sm-left">
+                            <h5 class="font-weight-bold mb-2">Program de lucru</h5>
+                            <p class="mb-2">Luni – Duminică <br> 9:00 – 20:00</p>
+                
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p > Cofetăria Poveste © 2026 - Toate drepturile sunt rezervate.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Footer End -->
+
+    <!-- Back to Top -->
+    <a href="#" class="btn btn-secondary px-2 back-to-top"><i class="fa fa-angle-double-up"></i></a>
+
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Contact Javascript File -->
+    <script src="mail/jqBootstrapValidation.min.js"></script>
+    <script src="mail/contact.js"></script>
+
+    <!-- Template Javascript -->
+    
+    <!-- 🛒 CART SIDEBAR -->
+<div id="cart-sidebar" class="cart-sidebar">
+  <div class="cart-header">
+    <h5>Coșul meu</h5>
+    <span id="close-cart">&times;</span>
+  </div>
+  <div id="cart-items" class="cart-items"></div>
+  <div class="cart-footer">
+    <p><strong>Total:</strong> <span id="total-price">0 lei</span></p>
+    <button id="checkout-btn" class="btn btn-primary w-100">Trimite comanda</button>
+  </div>
+</div>
+<!-- Product Modal -->
+<div id="product-modal" class="modal-overlay">
+  <div class="modal-content">
+    <button id="pm-close" class="modal-close">×</button>
+    <div class="modal-body">
+      <div class="modal-left">
+        <h3 id="pm-name"></h3>
+        <p id="pm-desc"></p>
+        <p id="pm-price" class="price"></p>
+
+        <div class="quantity-wrapper">
+          <label id="pm-label" for="pm-qty">Cantitate</label>
+          <div class="quantity-control">
+            <button class="qty-btn" id="pm-minus">−</button>
+            <input id="pm-qty" type="number" min="1" step="1" value="1">
+            <button class="qty-btn" id="pm-plus">+</button>
+          </div>
+        </div>
+
+        <button id="pm-add" class="btn btn-primary add-btn">Adaugă în coș</button>
+      </div>
+
+      <div class="modal-right">
+        <img id="pm-img" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+<div id="img-zoom-overlay" class="img-zoom-overlay">
+  <img id="img-zoom-display" src="">
+</div>
+
+<div id="order-form-overlay" class="order-form-overlay">
+  <div class="order-form">
+    <h3>Finalizează comanda</h3>
+    <label>Nume complet *</label>
+    <input type="text" id="order-name" required placeholder="Ex: Andrei Popescu">
+
+    <label>Număr de telefon *</label>
+    <input type="tel" id="order-phone" required placeholder="07XXXXXXXX" pattern="[0-9]{10}">
+
+    <label>Data și ora ridicării *</label>
+    <input type="datetime-local" id="order-date" required>
+
+    <button id="order-submit" class="btn btn-primary">Trimite comanda</button>
+    <button id="order-cancel" class="btn btn-secondary">Anulează</button>
+  </div>
+</div>
+
+
+
+
+<script src="js/main.js"></script>
+<a href="https://wa.me/40774950664" target="_blank" class="whatsapp-float">
+  <i class="fab fa-whatsapp"></i>
+</a>
+</body>
+
+</html>
