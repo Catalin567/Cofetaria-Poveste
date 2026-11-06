@@ -3,8 +3,8 @@
   "short_name": "Poveste",
   "start_url": "/index.html",
   "display": "standalone",
-  "background_color": "#ffffff",
-  "theme_color": "#d134c9",
+  "background_color": "#fcf8f2",
+  "theme_color": "#9a375b",
   "icons": [
     {
       "src": "android-chrome-192x192.png",

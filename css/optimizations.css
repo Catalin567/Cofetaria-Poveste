@@ -1,0 +1,43 @@
+/* Shared usability and responsive refinements. */
+:root { --focus-color: var(--berry); }
+html { scroll-padding-top: 24px; }
+body { overflow-x: clip; }
+img { max-width: 100%; }
+:focus-visible { outline: 3px solid var(--focus-color); outline-offset: 4px; }
+.skip-link { position: fixed; left: 16px; top: 12px; z-index: 1000000; padding: 12px 20px; background: #fff; color: var(--berry); transform: translateY(-180%); border-radius: 8px; }
+.skip-link:focus { transform: translateY(0); }
+#header-carousel .carousel-item > img { width: 100%; height: clamp(440px, 70vh, 780px) !important; max-height: none; object-fit: cover; }
+#header-carousel .carousel-caption { background: linear-gradient(180deg, rgba(35,19,30,.16), rgba(35,19,30,.62)); padding: 36px 64px; }
+#header-carousel .display-3 { font-size: clamp(1.8rem, 4.2vw, 4.2rem); line-height: 1.2; text-wrap: balance; }
+.carousel-control-prev, .carousel-control-next { width: 56px; }
+.page-header { background: linear-gradient(rgba(35,19,30,.35), rgba(35,19,30,.35)), url('../img/optimized/product-background-960.webp') center / cover no-repeat; }
+.portfolio-item img { height: auto; aspect-ratio: 4 / 3; object-fit: cover; }
+.portfolio-item:focus-within .portfolio-btn { opacity: 1; }
+.product-item .order-btn, .navbar-toggler, .qty-btn, #close-cart { min-width: 44px; min-height: 44px; }
+#close-cart { border: 0; background: transparent; color: inherit; font-size: 28px; cursor: pointer; }
+#cart-sidebar { max-width: 100vw; }
+#product-modal .modal-content { max-height: 92dvh; overflow-y: auto; }
+#product-modal .modal-body { min-width: 0; }
+.order-form { max-height: 92dvh; overflow-y: auto; }
+#contact iframe { display: block; max-width: 100%; width: 100%; }
+.whatsapp-float { padding-bottom: env(safe-area-inset-bottom, 0px); }
+@media (max-width: 767px) {
+  .navbar-brand { max-width: 80%; white-space: normal; }
+  .footer .display-4 { font-size: clamp(1.6rem, 7vw, 2.7rem); }
+  #header-carousel .carousel-caption { padding: 28px 48px; }
+  #header-carousel .carousel-item > img { height: clamp(440px, 65svh, 620px) !important; }
+  #header-carousel .carousel-caption .p-3 { padding: 8px !important; }
+  #header-carousel .btn { padding: 12px 24px; }
+  .page-header .display-3 { font-size: clamp(2rem, 9vw, 3.5rem); }
+  input, select, textarea { font-size: 16px !important; }
+  #contact .col-lg-6 + .col-lg-6 { margin-top: 24px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .01ms !important; animation-iteration-count: 1 !important; transition-duration: .01ms !important; scroll-behavior: auto !important; }
+}
+.portfolio-item .portfolio-btn { transition: opacity .2s ease; }
+.portfolio-item:focus-within .portfolio-btn { width: calc(100% - 60px); height: calc(100% - 60px); top: 30px; left: 30px; }
+@media (hover: none) {
+  .portfolio-item .portfolio-btn { width: 44px; height: 44px; top: calc(50% - 22px); left: calc(50% - 22px); opacity: .9; border-radius: 50%; }
+  .portfolio-item .portfolio-btn i { font-size: 24px !important; }
+}
