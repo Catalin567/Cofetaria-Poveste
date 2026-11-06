@@ -111,7 +111,7 @@ document.addEventListener("click", (e)=>{
 /* ======================
    3) CART SIDEBAR (deschide/închide)
    ====================== */
-document.addEventListener("DOMContentLoaded", ()=>{
+(() => {
   updateCartBadge();
   const cartBtn = document.getElementById("cart-btn");
   const sidebar = document.getElementById("cart-sidebar");
@@ -129,7 +129,7 @@ document.addEventListener("DOMContentLoaded", ()=>{
       sidebar.classList.remove("active");
     });
   }
-});
+})();
 
 /* ======================================================================
    SECȚIUNI DOAR PENTRU PAGINA "product.html"
@@ -178,23 +178,26 @@ const PRODUCTS = [
   { id:"pa014", name:"Faguri", price:115, img:"img/no-photo.jpg", category:"patiserie", desc:"Foi crocante umplute cu cremă dulce, desert clasic de casă. Preț/kg.\nIngrediente: făină, ouă, zahăr, unt, lapte, cacao.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
   { id:"pa015", name:"Fursec cu nucă", price:95, img:"img/fursnuci.jpg", category:"patiserie", desc:"Fursecuri fine cu nucă măcinată, fragede și aromate. Preț/kg.\nIngrediente: făină, nuci, unt, zahăr, ouă.\nAlergeni: gluten, nuci, lapte, ouă.", unit:"kg" },
   { id:"pa016", name:"Palmieri", price:95, img:"img/no-photo.jpg", category:"patiserie", desc:"Foietaj dulce caramelizat în formă de inimă. Preț/kg.\nIngrediente: făină, unt, zahăr.\nAlergeni: gluten, lapte.", unit:"kg" },
-  { id:"pa017", name:"Saleuri", price:90, img:"img/saleuri.jpg", category:"patiserie", desc:"Foietaj sărat cu brânză și semințe, perfect pentru gustări. Preț/kg.\nIngrediente: făină, brânză, unt, ouă, semințe.\nAlergeni: gluten, lapte, ouă, semințe.", unit:"kg" },
+  { id:"pa017", name:"Saleuri", price:90, img:"img/saleuti.jpg", category:"patiserie", desc:"Foietaj sărat cu brânză și semințe, perfect pentru gustări. Preț/kg.\nIngrediente: făină, brânză, unt, ouă, semințe.\nAlergeni: gluten, lapte, ouă, semințe.", unit:"kg" },
   { id:"pa018", name:"Sărățele", price:95, img:"img/saratele.jpg", category:"patiserie", desc:"Sărățele crocante și aromate, tradiționale. Preț/kg.\nIngrediente: făină, unt, brânză, ouă, sare.\nAlergeni: gluten, lapte, ouă.", unit:"kg" },
   { id:"pa019", name:"Nuci", price:110, img:"img/nuci.jpg", category:"patiserie", desc:"Fursecuri în formă de nucă, umplute cu cremă fină. Preț/kg.\nIngrediente: făină, ouă, zahăr, unt, lapte, nuci, cacao.\nAlergeni: gluten, ouă, lapte, nuci.", unit:"kg" },
   { id:"pa020", name:"Piersicuțe", price:110, img:"img/piersicute.jpg", category:"patiserie", desc:"Biscuiți colorați, umpluți cu cremă aromată – nostalgici și delicioși. Preț/kg.\nIngrediente: făină, zahăr, ouă, unt, coloranți alimentari naturali, esențe de fructe.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
 
   // === TORTURI ===
-  { id:"t011", name:"Tort Bento", price:90, img:"img/bento1.jpg", category:"torturi", desc:"Mini tort Bento delicat, perfect pentru ocazii speciale. Preț/kg.\nIngrediente: făină, lapte, ouă, frișcă, zahăr.\nAlergeni: gluten, lapte, ouă.", unit:"kg" },
-  { id:"t001", name:"Tort Oreo", price:128, img:"img/Oreo-cake.jpeg", category:"torturi", desc:"Blaturi fine de cacao, cremă de vanilie și bucăți de biscuiți Oreo. Preț/kg.\nIngrediente: făină, cacao, biscuiți Oreo, frișcă, lapte, ouă.\nAlergeni: gluten, ouă, lapte, soia.", unit:"kg" },
+  { id:"t011", name:"Tort Bento", price:95, img:"img/bento1.jpg", category:"torturi", desc:"Mini tort Bento, aproximativ 450–500 g. Preț: 95 lei/bucată.\nSortimente disponibile: Amandină, Iaurt cu fructe, Oreo, Paradis, Ciocolată și caramel, Snickers.\nPentru ingredientele și alergenii sortimentului ales, contactează cofetăria.", unit:"buc", fixedLabel:"Aproximativ 450–500 g / bucată" },
+  { id:"t001", name:"Tort Oreo", price:135, img:"img/Oreo-cake.jpeg", category:"torturi", desc:"Blaturi fine de cacao, cremă de vanilie și bucăți de biscuiți Oreo. Preț/kg.\nIngrediente: făină, cacao, biscuiți Oreo, frișcă, lapte, ouă.\nAlergeni: gluten, ouă, lapte, soia.", unit:"kg" },
   { id:"t002", name:"Tort Pădurea Neagră", price:130, img:"img/Padurea-neagra-cake.jpeg", category:"torturi", desc:"Clasic german cu vișine, frișcă naturală și ciocolată rasă. Preț/kg.\nIngrediente: făină, cacao, ouă, frișcă, vișine, ciocolată neagră.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
-  { id:"t003", name:"Tort Paradis", price:130, img:"img/paradis-cake.jpeg", category:"torturi", desc:"Cremă ușoară de vanilie și blat aerat, gust delicat. Preț/kg.\nIngrediente: făină, ouă, zahăr, lapte, vanilie, frișcă.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
-  { id:"t004", name:"Tort Smântănel cu Nuci", price:133, img:"img/smantanel-cake.jpeg", category:"torturi", desc:"Cremă de smântână dulce cu nuci caramelizate. Preț/kg.\nIngrediente: smântână, nuci, zahăr, ouă, făină.\nAlergeni: nuci, lapte, ouă, gluten.", unit:"kg" },
-  { id:"t005", name:"Tort Medovic cu Vișină", price:133, img:"img/medovik-cake.jpeg", category:"torturi", desc:"Blat cu miere, cremă fină și vișine acrișoare. Preț/kg.\nIngrediente: făină, miere, ouă, zahăr, frișcă, vișine.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
-  { id:"t006", name:"Tort Diplomat", price:119, img:"img/Diplomat-cake.jpeg", category:"torturi", desc:"Cremă de frișcă și fructe exotice, desert ușor și răcoritor. Preț/kg.\nIngrediente: frișcă, ouă, zahăr, fructe exotice, gelatină.\nAlergeni: ouă, lapte.", unit:"kg" },
-  { id:"t007", name:"Tort Mousse Trio Ciocolată", price:130, img:"img/no-photo.jpg", category:"torturi", desc:"Trei straturi de mousse din ciocolată albă, cu lapte și neagră. Preț/kg.\nIngrediente: ciocolată albă, ciocolată neagră, frișcă, ouă, unt.\nAlergeni: lapte, ouă, soia.", unit:"kg" },
-  { id:"t008", name:"Tort Iaurt cu Fructe", price:125, img:"img/iaurt-fructe.jpeg", category:"torturi", desc:"Cremă de iaurt și fructe proaspete, gust echilibrat și răcoritor. Preț/kg.\nIngrediente: iaurt, fructe, frișcă, gelatină, zahăr.\nAlergeni: lapte.", unit:"kg" },
-  { id:"t009", name:"Tort Snickers", price:129, img:"img/snikers-cake.jpeg", category:"torturi", desc:"Cremă caramel, arahide și blat de cacao – gust bogat și intens. Preț/kg.\nIngrediente: făină, ouă, cacao, caramel, arahide, frișcă.\nAlergeni: gluten, ouă, lapte, arahide.", unit:"kg" },
-  { id:"t010", name:"Tort Amandină", price:131, img:"img/amandina-cake.jpeg", category:"torturi", desc:"Blat de cacao însiropat, cremă de ciocolată și glazură lucioasă. Preț/kg.\nIngrediente: făină, ouă, cacao, unt, zahăr, ciocolată.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
+  { id:"t003", name:"Tort Paradis", price:136, img:"img/paradis-cake.jpeg", category:"torturi", desc:"Cremă ușoară de vanilie și blat aerat, gust delicat. Preț/kg.\nIngrediente: făină, ouă, zahăr, lapte, vanilie, frișcă.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
+  { id:"t004", name:"Tort Smântănel cu Nuci", price:139, img:"img/smantanel-cake.jpeg", category:"torturi", desc:"Cremă de smântână dulce cu nuci caramelizate. Preț/kg.\nIngrediente: smântână, nuci, zahăr, ouă, făină.\nAlergeni: nuci, lapte, ouă, gluten.", unit:"kg" },
+  { id:"t005", name:"Tort Medovic cu Vișină", price:139, img:"img/medovik-cake.jpeg", category:"torturi", desc:"Blat cu miere, cremă fină și vișine acrișoare. Preț/kg.\nIngrediente: făină, miere, ouă, zahăr, frișcă, vișine.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
+  { id:"t006", name:"Tort Diplomat", price:125, img:"img/Diplomat-cake.jpeg", category:"torturi", desc:"Cremă de frișcă și fructe exotice, desert ușor și răcoritor. Preț/kg.\nIngrediente: frișcă, ouă, zahăr, fructe exotice, gelatină.\nAlergeni: ouă, lapte.", unit:"kg" },
+  { id:"t007", name:"Tort Mousse Trio Ciocolată", price:134, img:"img/no-photo.jpg", category:"torturi", desc:"Trei straturi de mousse din ciocolată albă, cu lapte și neagră. Preț/kg.\nIngrediente: ciocolată albă, ciocolată neagră, frișcă, ouă, unt.\nAlergeni: lapte, ouă, soia.", unit:"kg" },
+  { id:"t008", name:"Tort Iaurt cu Fructe", price:135, img:"img/iaurt-fructe.jpeg", category:"torturi", desc:"Cremă de iaurt și fructe proaspete, gust echilibrat și răcoritor. Preț/kg.\nIngrediente: iaurt, fructe, frișcă, gelatină, zahăr.\nAlergeni: lapte.", unit:"kg" },
+  { id:"t009", name:"Tort Snickers", price:136, img:"img/snikers-cake.jpeg", category:"torturi", desc:"Cremă caramel, arahide și blat de cacao – gust bogat și intens. Preț/kg.\nIngrediente: făină, ouă, cacao, caramel, arahide, frișcă.\nAlergeni: gluten, ouă, lapte, arahide.", unit:"kg" },
+  { id:"t012", name:"Tort Poienița", price:135, img:"img/no-photo.jpg", category:"torturi", desc:"Tort Poienița. Preț: 135 lei/kg.\nPentru detalii despre ingrediente și alergeni, contactează cofetăria.", unit:"kg" },
+  { id:"t013", name:"Tort Pere-n caramel", price:135, img:"img/no-photo.jpg", category:"torturi", desc:"Tort Pere-n caramel. Preț: 135 lei/kg.\nPentru detalii despre ingrediente și alergeni, contactează cofetăria.", unit:"kg" },
+  { id:"t014", name:"Tort Brigadeiro cu cocos", price:145, img:"img/no-photo.jpg", category:"torturi", desc:"Tort Brigadeiro cu cocos. Preț: 145 lei/kg.\nPentru detalii despre ingrediente și alergeni, contactează cofetăria.", unit:"kg" },
+  { id:"t010", name:"Tort Amandină", price:137, img:"img/amandina-cake.jpeg", category:"torturi", desc:"Blat de cacao însiropat, cremă de ciocolată și glazură lucioasă. Preț/kg.\nIngrediente: făină, ouă, cacao, unt, zahăr, ciocolată.\nAlergeni: gluten, ouă, lapte.", unit:"kg" },
 
   // === DE SEZON ===
   
@@ -253,25 +256,24 @@ const PRODUCTS = [
 /* ======================
    5) CARD PRODUS + LISTARE
    ====================== */
-function createProductCard(p){
-  return `
-    <div class="col-lg-3 col-md-6 mb-4 pb-2">
-      <div class="product-item d-flex flex-column align-items-center text-center bg-light rounded py-5 px-3 "
-     data-id="${p.id}" 
-     data-category="${p.category}" 
-     data-price="${p.price}" 
-     data-desc="${p.desc}"
-     data-unit="${p.unit}">
+function productImage(src, width){
+  if (src === "img/no-photo.jpg") return "img/no-photo.svg";
+  return src.replace(/^img\/(.+)\.(?:jpe?g|avif)$/i, `img/fast/$1-${width}.webp`);
+}
 
-        <div class="bg-primary mt-n5 py-3" style="width: 80px;">
-          <h4 class="font-weight-bold text-white mb-0">${p.price}<br>lei</h4>
+function createProductCard(p, index = 0){
+  return `
+    <div class="col-6 col-lg-3 mb-3">
+      <div class="product-item d-flex flex-column" data-id="${p.id}" data-category="${p.category}" data-price="${p.price}" data-desc="${p.desc}" data-unit="${p.unit}">
+        <div class="product-photo">
+          <img src="${productImage(p.img, 320)}" srcset="${productImage(p.img, 320)} 320w, ${productImage(p.img, 640)} 640w" sizes="(max-width: 991px) 46vw, 260px" width="320" height="320" loading="${index < 4 ? 'eager' : 'lazy'}" decoding="async" alt="${p.name}">
         </div>
-        <div class="position-relative bg-primary rounded-circle mt-n3 mb-4 p-3">
-          <img class="rounded-circle w-100 h-100" src="${p.img}" style="object-fit: cover;">
+        <div class="product-copy">
+          <h5>${p.name}</h5>
+          <h4>${p.price} <small>lei${p.category === "torturi" ? (p.unit === "kg" ? "/kg" : "/buc") : ""}</small></h4>
+          ${p.fixedLabel ? `<small>${p.fixedLabel}</small>` : ""}
+          <a href="#" class="btn btn-primary order-btn" aria-label="Comandă ${p.name}">Comandă</a>
         </div>
-        <h5 class="font-weight-bold mb-3">${p.name}</h5>
-        ${p.fixedLabel ? `<small class="text-muted mb-3">${p.fixedLabel}</small>` : ""}
-        <a href="#" class="btn btn-sm btn-secondary order-btn">Comanda</a>
       </div>
     </div>
   `;
@@ -354,6 +356,13 @@ document.addEventListener('click', (e) => {
 
 
   pmImg.src = img;
+  const fullImage = img.replace(/-320\.webp$/, "-640.webp");
+  if (fullImage !== img) {
+    const detail = new Image();
+    detail.onload = () => { if (currentItem === card) pmImg.src = fullImage; };
+    detail.src = fullImage;
+  }
+  pmImg.alt = name;
   pmName.textContent = name;
   pmDesc.textContent = card.dataset.desc || 'Făcut cu drag în cofetăria noastră.';
   pmPrice.textContent = priceText;
@@ -428,11 +437,10 @@ else if (productId === "s013" || productId === "s014") {
 else {
   pmLabel.textContent = unit === "kg" ? "Cantitate (kg)" : "Cantitate (buc)";
 
-  const isBento = name.toLowerCase().includes("bento");
-
-  pmQty.min  = isCake && !isBento ? 0.5 : (isBento ? 0.4 : (isKgNonCake ? 0.1 : 1));
-  pmQty.step = isCake && !isBento ? 0.5 : (isBento ? 0.1 : (isKgNonCake ? 0.1 : 1));
-  pmQty.value = isCake && !isBento ? 1 : (isBento ? 0.4 : (isKgNonCake ? 0.1 : 1));
+  const isCakeByKg = isCake && unit === "kg";
+  pmQty.min = isCakeByKg ? 0.5 : (isKgNonCake ? 0.1 : 1);
+  pmQty.step = isCakeByKg ? 0.5 : (isKgNonCake ? 0.1 : 1);
+  pmQty.value = isKgNonCake ? 0.1 : 1;
 }
 
 
@@ -475,7 +483,7 @@ pmAdd?.addEventListener('click',(e)=>{
 const unit = currentItem.dataset.unit; 
 let qty;
 
-if (currentItem.dataset.id === "s013") {
+if ((currentItem.dataset.id === "s013" || currentItem.dataset.id === "s014")) {
   // cozonac clasic
   qty = parseFloat(
     document.querySelector('input[name="cozonac-size"]:checked')?.value
@@ -493,14 +501,13 @@ if (!qty || isNaN(qty)) qty = 1;
 
 
 const isCake = (cat === "torturi");
-const isBento = pmName.textContent.toLowerCase().includes("bento");
-const isKgNonCake = (unit === "kg" && !isCake) || isBento;
-
-if (currentItem.dataset.id !== "s013") {
-  if (isCake && !isBento) {
-    qty = Math.round(qty * 2) / 2;   // 0.5 kg
+if (currentItem.dataset.id !== "s013" && currentItem.dataset.id !== "s014") {
+  if (unit === "buc") {
+    qty = Math.max(1, Math.round(qty));
+  } else if (isCake) {
+    qty = Math.max(0.5, Math.round(qty * 2) / 2);
   } else {
-    qty = Math.round(qty * 10) / 10; // 0.1
+    qty = Math.max(0.1, Math.round(qty * 10) / 10);
   }
 }
 // s013 rămâne EXACT 0.65 / 1.3
@@ -606,7 +613,7 @@ if (selectedDate < minAllowed) {
   msg.style.bottom = "20px";
   msg.style.left = "50%";
   msg.style.transform = "translateX(-50%)";
-  msg.style.background = "#3498db";
+  msg.style.background = "var(--berry)";
   msg.style.color = "#fff";
   msg.style.padding = "12px 20px";
   msg.style.borderRadius = "8px";
@@ -644,7 +651,7 @@ if (selectedDate < minAllowed) {
 /* ======================
    8) INIT PAGE-SPECIFIC (product.html)
    ====================== */
-document.addEventListener("DOMContentLoaded", ()=>{
+(() => {
   // badge + coș (să fie corecte pe orice pagină)
   updateCartBadge();
   renderCart();
@@ -702,4 +709,4 @@ if (pickupInput) {
 
 
 
-});
+})();

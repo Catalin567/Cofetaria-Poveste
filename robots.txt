@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /about
+Disallow: /service
+Sitemap: https://cofetariapoveste.ro/sitemap.xml
